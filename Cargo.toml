@@ -5,9 +5,12 @@ authors = []
 edition = "2018"
 
 [dependencies]
-amethyst = "0.11.0"
+# amethyst = "0.11.0"
+amethyst = { git = "https://github.com/amethyst/amethyst", rev = "f02619a592649c11f10956dce46876ff21e113aa" }
+serde = "1.0.97"
 
 [features]
-empty = ["amethyst/empty"]
 metal = ["amethyst/metal"]
 vulkan = ["amethyst/vulkan"]
+# TODO!: depend on OS...
+default = ["amethyst/gltf", "metal"]
